@@ -5,8 +5,7 @@ Job listing website clone built using Nuxt.js
 
 
 ## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![2022-12-06_17-06](https://user-images.githubusercontent.com/80405293/205950469-09625473-ee08-4ffe-b5b0-d63c95757f6e.png)
 
 
 ## Features
