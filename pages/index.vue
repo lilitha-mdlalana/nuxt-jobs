@@ -1,8 +1,11 @@
 <script setup lang="ts">
 const count = ref(1);
-const { data: jobs } = await useFetch("https://remotive.com/api/remote-jobs", {
-  pick: ["jobs"],
-});
+const { data: jobs } = await useFetch(
+  "https://remotive.com/api/remote-jobs?limit=100",
+  {
+    pick: ["jobs"],
+  }
+);
 </script>
 
 <template>
