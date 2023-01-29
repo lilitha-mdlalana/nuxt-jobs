@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 const count = ref(1);
 const { data: jobs } = await useFetch(
   "https://remotive.com/api/remote-jobs?limit=100",
@@ -9,60 +9,34 @@ const { data: jobs } = await useFetch(
 </script>
 
 <template>
-  <section id="hero">
-    <div class="container">
-      <h1>Find Your Dream Job In Tech</h1>
-      <p>
-        We help you find exciting opportunities around the world.
-        <br />
-        Have the latest listings opening at your fingertips in your inbox.
-      </p>
-      <form @submit.prevent class="d-flex justify-content-center">
-        <div class="row gy-2 gx-3 align-items-center">
-          <div class="col-sm-9">
-            <input type="text" class="form-control" placeholder="Your email" />
-          </div>
-          <div class="col-sm-1">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </div>
-      </form>
+  <SectionsHero />
+  <section id="MainContent">
+    <h1 class="text-5xl font-bold text-center mt-2">Latest listings</h1>
+    <div
+      class="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
+    >
+      <div v-for="(job, index) in jobs.jobs.slice(0, 9 * count)">
+        <JobListingCard
+          :job-index="index"
+          :job-position="job.title"
+          :job-location="job.candidate_required_location"
+          :job-type="job.job_type"
+          :job-id="job.id"
+          :job-info="job.description"
+          :company-logo="job.company_logo"
+          :company-name="job.company_name"
+          :job-listing-url="job.url"
+        />
+      </div>
     </div>
   </section>
-  <section id="jobs">
-    <div class="container">
-      <h2 class="text-center mt-3" id="latest-jobs">Latest jobs</h2>
-      <div class="accordion" id="accordionParent">
-        <div v-for="job in jobs.jobs.slice(0, 10 * count)">
-          <JobListingCard
-            :job-position="job.title"
-            :job-location="job.candidate_required_location"
-            :job-type="job.job_type"
-            :job-id="job.id"
-            :job-info="job.description"
-            :company-logo="job.company_logo"
-            :company-name="job.company_name"
-            :job-listing-url="job.url"
-          />
-        </div>
-      </div>
 
-      <div class="d-flex justify-content-center m-4">
-        <button class="btn btn-primary" @click="count++">Load more</button>
-      </div>
-    </div>
-  </section>
+  <div class="flex justify-center m-12">
+    <button
+      class="inline-flex items-center px-7 py-4 text-md font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      @click="count++"
+    >
+      Load more
+    </button>
+  </div>
 </template>
-
-<style scoped>
-#hero {
-  background: url("~/assets/images/lorenzo-herrera-p0j-mE6mGo4-unsplash.jpg")
-    no-repeat fixed center;
-  color: white;
-  text-align: center;
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style>

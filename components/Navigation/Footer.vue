@@ -1,61 +1,92 @@
 <template>
-<div class="container">
-  <footer class="py-5">
-    <div class="row">
-      <div class="col-2">
-        <h5>Information</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Our Process</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Our Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
-        </ul>
+  <footer aria-label="Site Footer" class="bg-gray-100">
+    <div
+      class="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
+    >
+      <div
+        class="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8"
+      >
+        <a
+          class="inline-block rounded-full bg-blue-700 text-white shadow transition hover:bg-teal-500 sm:p-3 lg:p-4"
+          href="#MainContent"
+        >
+          <span class="sr-only">Back to top</span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
       </div>
 
-      <div class="col-2">
-        <h5>Candidates</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Applied Job</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">CV Manager</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Shortlisted Jobs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Job Alerts</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Dashboard</a></li>
-        </ul>
-      </div>
-
-      <div class="col-2">
-        <h5>Employers</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Job Packages</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Company Profile</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Manage Job</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Resume Alerts</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Post A Job</a></li>
-        </ul>
-      </div>
-
-      <div class="col-4 offset-1">
-        <form>
-          <h5>Subscribe to our newsletter</h5>
-          <p>Monthly digest of whats new and exciting from us.</p>
-          <div class="d-flex w-100 gap-2">
-            <label for="newsletter1" class="visually-hidden">Email address</label>
-            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-            <button class="btn btn-primary" type="button">Subscribe</button>
+      <div class="lg:flex lg:items-end lg:justify-between">
+        <div>
+          <div class="flex justify-center text-blue-600 lg:justify-start">
+            <h1 class="text-3xl font-bold">JobFinder</h1>
           </div>
-        </form>
-      </div>
-    </div>
 
-    <div class="d-flex justify-content-between py-4 my-4 border-top">
-      <p>© 2022 Job Finder, Inc. All rights reserved.</p>
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-      </ul>
+          <p
+            class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left"
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+            consequuntur amet culpa cum itaque neque.
+          </p>
+        </div>
+
+        <nav aria-label="Footer Nav" class="mt-12 lg:mt-0">
+          <ul
+            class="flex flex-wrap justify-center gap-6 md:gap-8 lg:justify-end lg:gap-12"
+          >
+            <li>
+              <a
+                class="text-gray-700 transition hover:text-gray-700/75"
+                href="/"
+              >
+                About
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-700 transition hover:text-gray-700/75"
+                href="/"
+              >
+                Services
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-700 transition hover:text-gray-700/75"
+                href="/"
+              >
+                Projects
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="text-gray-700 transition hover:text-gray-700/75"
+                href="/"
+              >
+                Blog
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="mt-12 text-center text-sm text-gray-500 lg:text-right">
+        Copyright &copy; 2022. All rights reserved.
+      </p>
     </div>
   </footer>
-</div>
 </template>

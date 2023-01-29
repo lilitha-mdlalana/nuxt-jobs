@@ -5,19 +5,13 @@ export default defineNuxtConfig({
       title: "Job Finder",
       link: [
         {
-          href: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css",
-          rel: "stylesheet",
-        },
-        {
-          rel: 'icon',
-          href:'/favicon.ico'
-        }
-      ],
-      script: [
-        {
-          src: "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js",
+          rel: "icon",
+          href: "/favicon.ico",
         },
       ],
     },
   },
+  modules:[
+    '@nuxtjs/tailwindcss'
+  ]
 });
